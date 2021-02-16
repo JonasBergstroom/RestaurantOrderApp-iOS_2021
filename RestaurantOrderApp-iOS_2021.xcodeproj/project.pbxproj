@@ -15,6 +15,7 @@
 		2E81D24025DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D23F25DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift */; };
 		2E81D26325DC1A4B00049100 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D26225DC1A4B00049100 /* Home.swift */; };
 		2E81D26825DC1A6D00049100 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D26725DC1A6D00049100 /* HomeViewModel.swift */; };
+		2E81D27525DC22A600049100 /* ToCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D27425DC22A600049100 /* ToCart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2E81D24125DC184D00049100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E81D26225DC1A4B00049100 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		2E81D26725DC1A6D00049100 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2E81D27425DC22A600049100 /* ToCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				2E81D26225DC1A4B00049100 /* Home.swift */,
+				2E81D27425DC22A600049100 /* ToCart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E81D27525DC22A600049100 /* ToCart.swift in Sources */,
 				2E81D22525DC184700049100 /* ContentView.swift in Sources */,
 				2E81D26325DC1A4B00049100 /* Home.swift in Sources */,
 				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,

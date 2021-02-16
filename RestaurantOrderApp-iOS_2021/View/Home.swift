@@ -11,7 +11,7 @@ struct Home: View {
     @StateObject var HomeModel = HomeViewModel()
     
     var body: some View {
-        ZStack {
+       ZStack {
             VStack(spacing: 10) {
                 
                 HStack(spacing: 15) {
@@ -74,8 +74,25 @@ struct Home: View {
                 
                 
             }
+        
+        
+        HStack {
             
             
+            ToCart(homeData: HomeModel)
+                .offset(x: HomeModel.showMenu ? 0 : -UIScreen.main.bounds.width / 1.6)
+                
+            Spacer(minLength: 0)
+            
+        }
+        .background(Color.black.opacity(HomeModel.showMenu ? 0.3 : 0).ignoresSafeArea())
+        
+        .onTapGesture(perform: {
+            withAnimation(.easeIn){
+                HomeModel.showMenu.toggle() }
+        })
+        
+        
             
             if HomeModel.noLocation {
                 Text("Please enable location in settings!")
@@ -83,8 +100,8 @@ struct Home: View {
             }
             
         }
-        
-        .onAppear(perform: {
+      
+       .onAppear(perform: {
             
             HomeModel.locationManager.delegate = HomeModel
             
@@ -93,8 +110,9 @@ struct Home: View {
             
         })
         
-        
+  
         
     }
 }
+
 
