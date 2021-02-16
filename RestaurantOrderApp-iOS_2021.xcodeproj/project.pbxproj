@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */; };
+		2E81D22525DC184700049100 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D22425DC184700049100 /* ContentView.swift */; };
+		2E81D22725DC184C00049100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D22625DC184C00049100 /* Assets.xcassets */; };
+		2E81D22A25DC184C00049100 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D22925DC184C00049100 /* Preview Assets.xcassets */; };
+		2E81D23525DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D23425DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift */; };
+		2E81D24025DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D23F25DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E81D23125DC184D00049100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E81D21725DC184700049100 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E81D21E25DC184700049100;
+			remoteInfo = "RestaurantOrderApp-iOS_2021";
+		};
+		2E81D23C25DC184D00049100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E81D21725DC184700049100 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E81D21E25DC184700049100;
+			remoteInfo = "RestaurantOrderApp-iOS_2021";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E81D21F25DC184700049100 /* RestaurantOrderApp-iOS_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RestaurantOrderApp-iOS_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderApp_iOS_2021App.swift; sourceTree = "<group>"; };
+		2E81D22425DC184700049100 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E81D22625DC184C00049100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E81D22925DC184C00049100 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E81D22B25DC184C00049100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E81D23025DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RestaurantOrderApp-iOS_2021Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E81D23425DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderApp_iOS_2021Tests.swift; sourceTree = "<group>"; };
+		2E81D23625DC184D00049100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E81D23B25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RestaurantOrderApp-iOS_2021UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E81D23F25DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderApp_iOS_2021UITests.swift; sourceTree = "<group>"; };
+		2E81D24125DC184D00049100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E81D21C25DC184700049100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D22D25DC184D00049100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D23825DC184D00049100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E81D21625DC184700049100 = {
+			isa = PBXGroup;
+			children = (
+				2E81D22125DC184700049100 /* RestaurantOrderApp-iOS_2021 */,
+				2E81D23325DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests */,
+				2E81D23E25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests */,
+				2E81D22025DC184700049100 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E81D22025DC184700049100 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E81D21F25DC184700049100 /* RestaurantOrderApp-iOS_2021.app */,
+				2E81D23025DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests.xctest */,
+				2E81D23B25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E81D22125DC184700049100 /* RestaurantOrderApp-iOS_2021 */ = {
+			isa = PBXGroup;
+			children = (
+				2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */,
+				2E81D22425DC184700049100 /* ContentView.swift */,
+				2E81D22625DC184C00049100 /* Assets.xcassets */,
+				2E81D22B25DC184C00049100 /* Info.plist */,
+				2E81D22825DC184C00049100 /* Preview Content */,
+			);
+			path = "RestaurantOrderApp-iOS_2021";
+			sourceTree = "<group>";
+		};
+		2E81D22825DC184C00049100 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E81D22925DC184C00049100 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E81D23325DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2E81D23425DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift */,
+				2E81D23625DC184D00049100 /* Info.plist */,
+			);
+			path = "RestaurantOrderApp-iOS_2021Tests";
+			sourceTree = "<group>";
+		};
+		2E81D23E25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E81D23F25DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift */,
+				2E81D24125DC184D00049100 /* Info.plist */,
+			);
+			path = "RestaurantOrderApp-iOS_2021UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E81D21E25DC184700049100 /* RestaurantOrderApp-iOS_2021 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E81D24425DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021" */;
+			buildPhases = (
+				2E81D21B25DC184700049100 /* Sources */,
+				2E81D21C25DC184700049100 /* Frameworks */,
+				2E81D21D25DC184700049100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RestaurantOrderApp-iOS_2021";
+			productName = "RestaurantOrderApp-iOS_2021";
+			productReference = 2E81D21F25DC184700049100 /* RestaurantOrderApp-iOS_2021.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E81D22F25DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E81D24725DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021Tests" */;
+			buildPhases = (
+				2E81D22C25DC184D00049100 /* Sources */,
+				2E81D22D25DC184D00049100 /* Frameworks */,
+				2E81D22E25DC184D00049100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E81D23225DC184D00049100 /* PBXTargetDependency */,
+			);
+			name = "RestaurantOrderApp-iOS_2021Tests";
+			productName = "RestaurantOrderApp-iOS_2021Tests";
+			productReference = 2E81D23025DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E81D23A25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E81D24A25DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021UITests" */;
+			buildPhases = (
+				2E81D23725DC184D00049100 /* Sources */,
+				2E81D23825DC184D00049100 /* Frameworks */,
+				2E81D23925DC184D00049100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E81D23D25DC184D00049100 /* PBXTargetDependency */,
+			);
+			name = "RestaurantOrderApp-iOS_2021UITests";
+			productName = "RestaurantOrderApp-iOS_2021UITests";
+			productReference = 2E81D23B25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E81D21725DC184700049100 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					2E81D21E25DC184700049100 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					2E81D22F25DC184D00049100 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2E81D21E25DC184700049100;
+					};
+					2E81D23A25DC184D00049100 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2E81D21E25DC184700049100;
+					};
+				};
+			};
+			buildConfigurationList = 2E81D21A25DC184700049100 /* Build configuration list for PBXProject "RestaurantOrderApp-iOS_2021" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E81D21625DC184700049100;
+			productRefGroup = 2E81D22025DC184700049100 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E81D21E25DC184700049100 /* RestaurantOrderApp-iOS_2021 */,
+				2E81D22F25DC184D00049100 /* RestaurantOrderApp-iOS_2021Tests */,
+				2E81D23A25DC184D00049100 /* RestaurantOrderApp-iOS_2021UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E81D21D25DC184700049100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E81D22A25DC184C00049100 /* Preview Assets.xcassets in Resources */,
+				2E81D22725DC184C00049100 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D22E25DC184D00049100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D23925DC184D00049100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E81D21B25DC184700049100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E81D22525DC184700049100 /* ContentView.swift in Sources */,
+				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D22C25DC184D00049100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E81D23525DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81D23725DC184D00049100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E81D24025DC184D00049100 /* RestaurantOrderApp_iOS_2021UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E81D23225DC184D00049100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E81D21E25DC184700049100 /* RestaurantOrderApp-iOS_2021 */;
+			targetProxy = 2E81D23125DC184D00049100 /* PBXContainerItemProxy */;
+		};
+		2E81D23D25DC184D00049100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E81D21E25DC184700049100 /* RestaurantOrderApp-iOS_2021 */;
+			targetProxy = 2E81D23C25DC184D00049100 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E81D24225DC184D00049100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E81D24325DC184D00049100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E81D24525DC184D00049100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RestaurantOrderApp-iOS_2021/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E81D24625DC184D00049100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RestaurantOrderApp-iOS_2021/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E81D24825DC184D00049100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestaurantOrderApp-iOS_2021.app/RestaurantOrderApp-iOS_2021";
+			};
+			name = Debug;
+		};
+		2E81D24925DC184D00049100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestaurantOrderApp-iOS_2021.app/RestaurantOrderApp-iOS_2021";
+			};
+			name = Release;
+		};
+		2E81D24B25DC184D00049100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RestaurantOrderApp-iOS_2021";
+			};
+			name = Debug;
+		};
+		2E81D24C25DC184D00049100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RestaurantOrderApp-iOS_2021";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E81D21A25DC184700049100 /* Build configuration list for PBXProject "RestaurantOrderApp-iOS_2021" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E81D24225DC184D00049100 /* Debug */,
+				2E81D24325DC184D00049100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E81D24425DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E81D24525DC184D00049100 /* Debug */,
+				2E81D24625DC184D00049100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E81D24725DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E81D24825DC184D00049100 /* Debug */,
+				2E81D24925DC184D00049100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E81D24A25DC184D00049100 /* Build configuration list for PBXNativeTarget "RestaurantOrderApp-iOS_2021UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E81D24B25DC184D00049100 /* Debug */,
+				2E81D24C25DC184D00049100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E81D21725DC184700049100 /* Project object */;
+}
