@@ -7,11 +7,10 @@
 
 import SwiftUI
 import CoreLocation
+import Firebase
 
-
-class Location {
     
-}
+
 class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     
@@ -21,6 +20,10 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     @Published var userAdress = ""
     @Published var noLocation = false
     @Published var showMenu = false
+    
+    @Published var items: [Item] = []
+    
+   
 
     
     
@@ -55,6 +58,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         self.userLocation = locations.last
         self.extractLocation()
+        self.login()
        
         
         
@@ -76,4 +80,48 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         self.userAdress = adress
         }
     }
+    
+    func login() {
+        
+        Auth.auth().signInAnonymously{ (res, err) in
+            if err != nil {
+            print(err!.localizedDescription)
+                return
+            }
+            
+            
+            print("Success = \(res!.user.uid)")
+            
+            self.getData()
+        }
+        
+    }
+    
+    
+    
+    func getData() {
+        
+        let db = Firestore.firestore()
+        
+        db.collection("Items").getDocuments{ (snap, err) in
+            
+            guard let itemData = snap
+                else{return}
+            
+            self.items = itemData.documents.compactMap({ (doc) -> Item? in
+                
+                let id = doc.documentID
+                let name = doc.get("itemName") as! String
+                let price = doc.get("itemCost") as! Int
+                let ratings = doc.get("itemRatings") as! String
+                let image = doc.get("itemImage") as! String
+                let details = doc.get("itemDetails") as! String
+        
+                
+                
+                return Item(id: id, itemName: name, itemCost: price, itemDetails: details, itemImage: image, itemRatings: ratings)
+            })
+        
+    }
+}
 }

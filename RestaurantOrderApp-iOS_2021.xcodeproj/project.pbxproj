@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		2E81D26825DC1A6D00049100 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D26725DC1A6D00049100 /* HomeViewModel.swift */; };
 		2E81D27525DC22A600049100 /* ToCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D27425DC22A600049100 /* ToCart.swift */; };
 		2E81D27A25DC248F00049100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D27925DC248F00049100 /* GoogleService-Info.plist */; };
+		2E81D29E25DD2D3100049100 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D29D25DD2D3100049100 /* Item.swift */; };
 		A87535897C1E42574BA2B030 /* Pods_RestaurantOrderApp_iOS_2021Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C8B959796BB3E42217F5F /* Pods_RestaurantOrderApp_iOS_2021Tests.framework */; };
 		BCB31894CB9206686865F73D /* Pods_RestaurantOrderApp_iOS_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B634EA0EBFD939F0EDC64E29 /* Pods_RestaurantOrderApp_iOS_2021.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		2E81D26725DC1A6D00049100 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2E81D27425DC22A600049100 /* ToCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCart.swift; sourceTree = "<group>"; };
 		2E81D27925DC248F00049100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2E81D29D25DD2D3100049100 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		56B56F7CBDE7581D57C46F63 /* Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E2EBAEB92CE9C2ECCE25F2E /* Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		648A40CE7F0AAC94E1D8FA09 /* Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		2E81D25525DC1A0400049100 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2E81D29D25DD2D3100049100 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +206,6 @@
 				5E2EBAEB92CE9C2ECCE25F2E /* Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig */,
 				56B56F7CBDE7581D57C46F63 /* Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -449,6 +451,7 @@
 				2E81D22525DC184700049100 /* ContentView.swift in Sources */,
 				2E81D26325DC1A4B00049100 /* Home.swift in Sources */,
 				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,
+				2E81D29E25DD2D3100049100 /* Item.swift in Sources */,
 				2E81D26825DC1A6D00049100 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021";
+				PRODUCT_BUNDLE_IDENTIFIER = FBios.Jonas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,7 +641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Swift.RestaurantOrderApp-iOS-2021";
+				PRODUCT_BUNDLE_IDENTIFIER = FBios.Jonas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

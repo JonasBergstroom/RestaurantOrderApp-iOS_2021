@@ -70,7 +70,23 @@ struct Home: View {
                 
                 Divider()
                 
-                Spacer()
+                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+                   
+                    
+                    VStack(spacing: 25){
+                        
+                        
+                        ForEach(HomeModel.items) {item in
+                            
+                            Text(item.itemName)
+                          
+                                
+                            
+                        }
+                        
+                        
+                    }
+                })
                 
                 
             }
