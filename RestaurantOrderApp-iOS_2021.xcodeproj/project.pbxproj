@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		2E81D27525DC22A600049100 /* ToCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D27425DC22A600049100 /* ToCart.swift */; };
 		2E81D27A25DC248F00049100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D27925DC248F00049100 /* GoogleService-Info.plist */; };
 		2E81D29E25DD2D3100049100 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D29D25DD2D3100049100 /* Item.swift */; };
+		2E81D2AC25DD6B1300049100 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D2AB25DD6B1300049100 /* FoodView.swift */; };
+		2E81D2B525DD6C2200049100 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2E81D2B425DD6C2200049100 /* SDWebImageSwiftUI */; };
 		A87535897C1E42574BA2B030 /* Pods_RestaurantOrderApp_iOS_2021Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C8B959796BB3E42217F5F /* Pods_RestaurantOrderApp_iOS_2021Tests.framework */; };
 		BCB31894CB9206686865F73D /* Pods_RestaurantOrderApp_iOS_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B634EA0EBFD939F0EDC64E29 /* Pods_RestaurantOrderApp_iOS_2021.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,7 @@
 		2E81D27425DC22A600049100 /* ToCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCart.swift; sourceTree = "<group>"; };
 		2E81D27925DC248F00049100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E81D29D25DD2D3100049100 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2E81D2AB25DD6B1300049100 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		56B56F7CBDE7581D57C46F63 /* Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E2EBAEB92CE9C2ECCE25F2E /* Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		648A40CE7F0AAC94E1D8FA09 /* Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E81D2B525DD6C2200049100 /* SDWebImageSwiftUI in Frameworks */,
 				BCB31894CB9206686865F73D /* Pods_RestaurantOrderApp_iOS_2021.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +170,7 @@
 			children = (
 				2E81D26225DC1A4B00049100 /* Home.swift */,
 				2E81D27425DC22A600049100 /* ToCart.swift */,
+				2E81D2AB25DD6B1300049100 /* FoodView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +232,9 @@
 			dependencies = (
 			);
 			name = "RestaurantOrderApp-iOS_2021";
+			packageProductDependencies = (
+				2E81D2B425DD6C2200049100 /* SDWebImageSwiftUI */,
+			);
 			productName = "RestaurantOrderApp-iOS_2021";
 			productReference = 2E81D21F25DC184700049100 /* RestaurantOrderApp-iOS_2021.app */;
 			productType = "com.apple.product-type.application";
@@ -301,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 2E81D21625DC184700049100;
+			packageReferences = (
+				2E81D2B325DD6C2100049100 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 2E81D22025DC184700049100 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,6 +460,7 @@
 			files = (
 				2E81D27525DC22A600049100 /* ToCart.swift in Sources */,
 				2E81D22525DC184700049100 /* ContentView.swift in Sources */,
+				2E81D2AC25DD6B1300049100 /* FoodView.swift in Sources */,
 				2E81D26325DC1A4B00049100 /* Home.swift in Sources */,
 				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,
 				2E81D29E25DD2D3100049100 /* Item.swift in Sources */,
@@ -772,6 +784,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E81D2B325DD6C2100049100 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E81D2B425DD6C2200049100 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E81D2B325DD6C2100049100 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E81D21725DC184700049100 /* Project object */;
 }
