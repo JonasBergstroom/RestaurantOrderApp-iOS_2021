@@ -75,20 +75,19 @@ struct Home: View {
                     
                     VStack(spacing: 25){
                         
-                        
                         ForEach(HomeModel.items) {item in
-                            
-                            Text(item.itemName)
-                          
+                            Color.blue
+                            FoodView(item: item)
+                                .frame(width: UIScreen.main.bounds.width - 6)
                                 
-                            
                         }
                         
-                        
                     }
+                    
+                    
                 })
                 
-                
+          
             }
         
         
@@ -126,7 +125,6 @@ struct Home: View {
             
         })
         
-  
         
     }
 }
