@@ -22,6 +22,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     @Published var showMenu = false
     
     @Published var items: [Item] = []
+    @Published var filtered: [Item] = []
+
     
    
 
@@ -121,7 +123,26 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
                 
                 return Item(id: id, itemName: name, itemCost: price, itemDetails: details, itemImage: image, itemRatings: ratings)
             })
+            
+            self.filtered = self.items
         
     }
 }
+    
+    
+    
+    func filterData(){
+        
+        
+        withAnimation(.linear) {
+            self.filtered = self.items.filter{
+                
+                return $0.itemName.lowercased().contains(self.search.lowercased())
+            }
+        }
+      
+        
+        
+        
+    }
 }

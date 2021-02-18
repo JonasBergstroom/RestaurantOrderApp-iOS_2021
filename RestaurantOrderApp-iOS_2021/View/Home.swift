@@ -48,22 +48,16 @@ struct Home: View {
                 
                 HStack(spacing: 15) {
                     
+                    Image(systemName: "magnifyingglass")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                    
+                    
+                    
                     
                     TextField("Search", text: $HomeModel.search)
                     
-                    if HomeModel.search != "" {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            
-                            Image(systemName: "magnifyingglass")
-                                .font(.title2)
-                                .foregroundColor(.gray)
-                            
-                            
-                            
-                            
-                        })
-                        .animation(.easeIn)
-                    }
+              
                 }
                 .padding(.horizontal)
                 .padding(.top,10)
@@ -75,14 +69,46 @@ struct Home: View {
                     
                     VStack(spacing: 25){
                         
-                        ForEach(HomeModel.items) {item in
+                        ForEach(HomeModel.filtered) {item in
                             Color.blue
-                            FoodView(item: item)
-                                .frame(width: UIScreen.main.bounds.width - 6)
+                            
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
                                 
+                                
+                                FoodView(item: item)
+                                
+                                
+                                HStack {
+                
+                                    Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                                    
+                                    Button(action: {}, label: {
+                                        
+                                        Image(systemName: "plus.circle.fill")
+                                            .foregroundColor(.blue)
+                                            .padding(5)
+                                            .font(.system(size: 35))
+                                            .background(Color("blue"))
+                                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                                    })
+                                    
+                                    
+                                    
+                                }
+                                
+                                .padding(.trailing,10)
+                                .padding(.top,10)
+                                  
+                                    
+                                
+                            })
+                            .frame(width: UIScreen.main.bounds.width - 6)
+                            
                         }
                         
                     }
+                    
+                    .padding(.top,10)
                     
                     
                 })
@@ -125,7 +151,29 @@ struct Home: View {
             
         })
         
+       .onChange(of: HomeModel.search, perform: { value in
+        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
         
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            
+            if value == HomeModel.search && HomeModel.search != "" {
+                
+                
+                HomeModel.filterData()
+                
+            }
+            
+            
+        }
+        
+        if HomeModel.search == "" {
+            
+            withAnimation(.linear){HomeModel.filtered = HomeModel.items}
+
+            
+        }
+       })
     }
 }
 

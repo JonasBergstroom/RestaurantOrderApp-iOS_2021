@@ -19,7 +19,8 @@ struct FoodView: View {
             WebImage(url: URL(string: item.itemImage))
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 250)
+                .frame(width: UIScreen.main.bounds.width - 6, height: 250)
+
             
             
             HStack(spacing: 8) {
@@ -52,7 +53,7 @@ struct FoodView: View {
                 
                 Text(item.itemDetails)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .background(Color("grey"))
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 
                 
