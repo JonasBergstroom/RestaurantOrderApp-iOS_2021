@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		29DF9510E164B7003A267667 /* Pods_RestaurantOrderApp_iOS_2021_RestaurantOrderApp_iOS_2021UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB328F2569EE9B375CDF7B2 /* Pods_RestaurantOrderApp_iOS_2021_RestaurantOrderApp_iOS_2021UITests.framework */; };
 		2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */; };
-		2E81D22525DC184700049100 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D22425DC184700049100 /* ContentView.swift */; };
 		2E81D22725DC184C00049100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D22625DC184C00049100 /* Assets.xcassets */; };
 		2E81D22A25DC184C00049100 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E81D22925DC184C00049100 /* Preview Assets.xcassets */; };
 		2E81D23525DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D23425DC184D00049100 /* RestaurantOrderApp_iOS_2021Tests.swift */; };
@@ -21,6 +20,9 @@
 		2E81D29E25DD2D3100049100 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D29D25DD2D3100049100 /* Item.swift */; };
 		2E81D2AC25DD6B1300049100 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81D2AB25DD6B1300049100 /* FoodView.swift */; };
 		2E81D2B525DD6C2200049100 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2E81D2B425DD6C2200049100 /* SDWebImageSwiftUI */; };
+		2EB73BC625E8011300AD7F6C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BC525E8011300AD7F6C /* Messages.swift */; };
+		2EB73BD425E801B800AD7F6C /* ChatroomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BD325E801B800AD7F6C /* ChatroomsViewModel.swift */; };
+		2EB73BE125E801E300AD7F6C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BE025E801E300AD7F6C /* MessageViewModel.swift */; };
 		A87535897C1E42574BA2B030 /* Pods_RestaurantOrderApp_iOS_2021Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C8B959796BB3E42217F5F /* Pods_RestaurantOrderApp_iOS_2021Tests.framework */; };
 		BCB31894CB9206686865F73D /* Pods_RestaurantOrderApp_iOS_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B634EA0EBFD939F0EDC64E29 /* Pods_RestaurantOrderApp_iOS_2021.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +47,6 @@
 /* Begin PBXFileReference section */
 		2E81D21F25DC184700049100 /* RestaurantOrderApp-iOS_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RestaurantOrderApp-iOS_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOrderApp_iOS_2021App.swift; sourceTree = "<group>"; };
-		2E81D22425DC184700049100 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E81D22625DC184C00049100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E81D22925DC184C00049100 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E81D22B25DC184C00049100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,9 @@
 		2E81D27925DC248F00049100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E81D29D25DD2D3100049100 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2E81D2AB25DD6B1300049100 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		2EB73BC525E8011300AD7F6C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		2EB73BD325E801B800AD7F6C /* ChatroomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsViewModel.swift; sourceTree = "<group>"; };
+		2EB73BE025E801E300AD7F6C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		56B56F7CBDE7581D57C46F63 /* Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E2EBAEB92CE9C2ECCE25F2E /* Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		648A40CE7F0AAC94E1D8FA09 /* Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,11 +130,12 @@
 		2E81D22125DC184700049100 /* RestaurantOrderApp-iOS_2021 */ = {
 			isa = PBXGroup;
 			children = (
+				2EB73BCA25E8013C00AD7F6C /* Units */,
+				2EB73BB225E8004100AD7F6C /* ScreenChat */,
 				2E81D25625DC1A1000049100 /* ViewModel */,
 				2E81D25525DC1A0400049100 /* Model */,
 				2E81D25425DC19EF00049100 /* View */,
 				2E81D22225DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift */,
-				2E81D22425DC184700049100 /* ContentView.swift */,
 				2E81D27925DC248F00049100 /* GoogleService-Info.plist */,
 				2E81D22625DC184C00049100 /* Assets.xcassets */,
 				2E81D22B25DC184C00049100 /* Info.plist */,
@@ -189,6 +194,23 @@
 				2E81D26725DC1A6D00049100 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EB73BB225E8004100AD7F6C /* ScreenChat */ = {
+			isa = PBXGroup;
+			children = (
+				2EB73BC525E8011300AD7F6C /* Messages.swift */,
+			);
+			path = ScreenChat;
+			sourceTree = "<group>";
+		};
+		2EB73BCA25E8013C00AD7F6C /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				2EB73BD325E801B800AD7F6C /* ChatroomsViewModel.swift */,
+				2EB73BE025E801E300AD7F6C /* MessageViewModel.swift */,
+			);
+			path = Units;
 			sourceTree = "<group>";
 		};
 		395AB735CA951D50D1E40BB9 /* Frameworks */ = {
@@ -459,10 +481,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E81D27525DC22A600049100 /* ToCart.swift in Sources */,
-				2E81D22525DC184700049100 /* ContentView.swift in Sources */,
+				2EB73BE125E801E300AD7F6C /* MessageViewModel.swift in Sources */,
 				2E81D2AC25DD6B1300049100 /* FoodView.swift in Sources */,
 				2E81D26325DC1A4B00049100 /* Home.swift in Sources */,
 				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,
+				2EB73BC625E8011300AD7F6C /* Messages.swift in Sources */,
+				2EB73BD425E801B800AD7F6C /* ChatroomsViewModel.swift in Sources */,
 				2E81D29E25DD2D3100049100 /* Item.swift in Sources */,
 				2E81D26825DC1A6D00049100 /* HomeViewModel.swift in Sources */,
 			);
@@ -624,6 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantOrderApp-iOS_2021/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KDAWBCR66;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -646,6 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RestaurantOrderApp-iOS_2021/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KDAWBCR66;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "RestaurantOrderApp-iOS_2021/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

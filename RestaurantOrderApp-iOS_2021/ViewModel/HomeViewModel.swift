@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocation
 import Firebase
 
-    
+
 
 class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
@@ -23,10 +23,10 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     @Published var items: [Item] = []
     @Published var filtered: [Item] = []
-
     
-   
-
+    
+    
+    
     
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager)
@@ -61,7 +61,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         self.userLocation = locations.last
         self.extractLocation()
         self.login()
-       
+        
         
         
     }
@@ -87,7 +87,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         Auth.auth().signInAnonymously{ (res, err) in
             if err != nil {
-            print(err!.localizedDescription)
+                print(err!.localizedDescription)
                 return
             }
             
@@ -108,7 +108,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         db.collection("Items").getDocuments{ (snap, err) in
             
             guard let itemData = snap
-                else{return}
+            else{return}
             
             self.items = itemData.documents.compactMap({ (doc) -> Item? in
                 
@@ -118,16 +118,16 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
                 let ratings = doc.get("itemRatings") as! String
                 let image = doc.get("itemImage") as! String
                 let details = doc.get("itemDetails") as! String
-        
+                
                 
                 
                 return Item(id: id, itemName: name, itemCost: price, itemDetails: details, itemImage: image, itemRatings: ratings)
             })
             
             self.filtered = self.items
-        
+            
+        }
     }
-}
     
     
     
@@ -140,7 +140,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
                 return $0.itemName.lowercased().contains(self.search.lowercased())
             }
         }
-      
+        
         
         
         

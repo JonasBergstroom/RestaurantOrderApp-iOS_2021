@@ -20,7 +20,7 @@ struct FoodView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.main.bounds.width - 6, height: 250)
-
+            
             
             
             HStack(spacing: 8) {
@@ -54,7 +54,7 @@ struct FoodView: View {
                 Text(item.itemDetails)
                     .font(.caption)
                     .background(Color("grey"))
-                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                    .lineLimit(2)
                 
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)

@@ -10,10 +10,13 @@ import Firebase
 
 @main
 struct RestaurantOrderApp_iOS_2021App: App {
+    
+ 
+  
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home(isOpen: .constant(false))
         }
     }
 }
