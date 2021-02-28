@@ -11,7 +11,6 @@ struct Home: View {
     
     @StateObject var HomeModel = HomeViewModel()
     @ObservedObject var viewModel = ChatroomsViewModel()
-    @Binding var isOpen: Bool
     @State var messagesOpen = false
     
 
@@ -109,13 +108,15 @@ struct Home: View {
                                     
                                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                                     
-                                    Button(action: {}, label: {
+                                    Button(action: {
+                                        HomeModel.addToCart(item: item)
+                                    }, label: {
                                         
-                                        Image(systemName: "plus.circle.fill")
+                                        Image(systemName: item.isAdded ? "checkmark" : "plus.circle.fill")
                                             .foregroundColor(.blue)
                                             .padding(5)
                                             .font(.system(size: 35))
-                                            .background(Color("blue"))
+                                            .background(item.isAdded ? Color.green : Color("blue"))
                                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                     })
                                     
@@ -171,17 +172,15 @@ struct Home: View {
             Messages(chatroom: Chatroomss(id: Auth.auth().currentUser!.uid))
         }
         
-        .onAppear(perform: {
-            
-            HomeModel.locationManager.delegate = HomeModel
-            
-            self.viewModel.createChatroom( handler: {
-                self.isOpen = false
-                
-            })
-            
-            
-        })
+        
+         .onAppear(perform: {
+              
+              HomeModel.locationManager.delegate = HomeModel
+              
+              
+              
+              
+          })
         
         .onChange(of: HomeModel.search, perform: { value in
             /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/

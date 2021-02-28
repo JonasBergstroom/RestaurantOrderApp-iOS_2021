@@ -24,6 +24,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     @Published var items: [Item] = []
     @Published var filtered: [Item] = []
     
+    @Published var cartItmes: [Cart] = []
     
     
     
@@ -144,5 +145,35 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         
         
+    }
+    
+    
+    func addToCart(item: Item) {
+        
+        self.items[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+        self.filtered[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+
+        
+        if item.isAdded {
+            self.cartItmes.remove(at: getIndex(item: item, isCartIndex: true))
+            return
+        }
+        
+        self.cartItmes.append(Cart(item: item, quantity: 1))
+        
+    }
+    
+    
+    func getIndex(item: Item,isCartIndex: Bool) ->Int{
+        let index = self.items.firstIndex {
+            (item1) -> Bool in
+            return item.id == item1.id
+        } ?? 0
+        let cartindex = self.cartItmes.firstIndex {
+            (item1) -> Bool in
+            return item.id == item1.item.id
+        } ?? 0
+        
+        return isCartIndex ? cartindex : index
     }
 }

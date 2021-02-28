@@ -15,8 +15,7 @@ struct ToCart: View {
         
         VStack {
             
-            Button(action: {}, label: {
-                
+            NavigationLink(destination: CartView(homeData: homeData)) {
                 HStack(spacing: 15) {
                     
                     Image(systemName: "cart")
@@ -31,8 +30,8 @@ struct ToCart: View {
                     Spacer(minLength: 0)
                 }
                 .padding()
-                
-            })
+            }
+        
             
             
             Spacer()

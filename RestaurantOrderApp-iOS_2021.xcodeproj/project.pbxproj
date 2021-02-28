@@ -23,6 +23,9 @@
 		2EB73BC625E8011300AD7F6C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BC525E8011300AD7F6C /* Messages.swift */; };
 		2EB73BD425E801B800AD7F6C /* ChatroomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BD325E801B800AD7F6C /* ChatroomsViewModel.swift */; };
 		2EB73BE125E801E300AD7F6C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73BE025E801E300AD7F6C /* MessageViewModel.swift */; };
+		2EB73C1B25E9437800AD7F6C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73C1A25E9437800AD7F6C /* Cart.swift */; };
+		2EB73C2025EBD67C00AD7F6C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73C1F25EBD67C00AD7F6C /* CartView.swift */; };
+		2EB73C2525EBDBAC00AD7F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73C2425EBDBAC00AD7F6C /* ContentView.swift */; };
 		A87535897C1E42574BA2B030 /* Pods_RestaurantOrderApp_iOS_2021Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C8B959796BB3E42217F5F /* Pods_RestaurantOrderApp_iOS_2021Tests.framework */; };
 		BCB31894CB9206686865F73D /* Pods_RestaurantOrderApp_iOS_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B634EA0EBFD939F0EDC64E29 /* Pods_RestaurantOrderApp_iOS_2021.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +68,9 @@
 		2EB73BC525E8011300AD7F6C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		2EB73BD325E801B800AD7F6C /* ChatroomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsViewModel.swift; sourceTree = "<group>"; };
 		2EB73BE025E801E300AD7F6C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		2EB73C1A25E9437800AD7F6C /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		2EB73C1F25EBD67C00AD7F6C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		2EB73C2425EBDBAC00AD7F6C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56B56F7CBDE7581D57C46F63 /* Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E2EBAEB92CE9C2ECCE25F2E /* Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021Tests/Pods-RestaurantOrderApp-iOS_2021Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		648A40CE7F0AAC94E1D8FA09 /* Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests/Pods-RestaurantOrderApp-iOS_2021-RestaurantOrderApp-iOS_2021UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 				2E81D26225DC1A4B00049100 /* Home.swift */,
 				2E81D27425DC22A600049100 /* ToCart.swift */,
 				2E81D2AB25DD6B1300049100 /* FoodView.swift */,
+				2EB73C1F25EBD67C00AD7F6C /* CartView.swift */,
+				2EB73C2425EBDBAC00AD7F6C /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2E81D29D25DD2D3100049100 /* Item.swift */,
+				2EB73C1A25E9437800AD7F6C /* Cart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,11 +491,14 @@
 			files = (
 				2E81D27525DC22A600049100 /* ToCart.swift in Sources */,
 				2EB73BE125E801E300AD7F6C /* MessageViewModel.swift in Sources */,
+				2EB73C2525EBDBAC00AD7F6C /* ContentView.swift in Sources */,
 				2E81D2AC25DD6B1300049100 /* FoodView.swift in Sources */,
 				2E81D26325DC1A4B00049100 /* Home.swift in Sources */,
 				2E81D22325DC184700049100 /* RestaurantOrderApp_iOS_2021App.swift in Sources */,
 				2EB73BC625E8011300AD7F6C /* Messages.swift in Sources */,
+				2EB73C2025EBD67C00AD7F6C /* CartView.swift in Sources */,
 				2EB73BD425E801B800AD7F6C /* ChatroomsViewModel.swift in Sources */,
+				2EB73C1B25E9437800AD7F6C /* Cart.swift in Sources */,
 				2E81D29E25DD2D3100049100 /* Item.swift in Sources */,
 				2E81D26825DC1A6D00049100 /* HomeViewModel.swift in Sources */,
 			);
