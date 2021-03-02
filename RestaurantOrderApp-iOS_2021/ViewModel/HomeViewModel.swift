@@ -176,4 +176,32 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         return isCartIndex ? cartindex : index
     }
+    
+    func calculateTotalPrice()->String {
+        
+        
+        var price : Float = 0
+        
+        
+        cartItmes.forEach { (item) in
+            price += Float(item.quantity) * Float(truncating: NSNumber(value: item.item.itemCost))
+        }
+        
+        return getPrice(value: price)
+        
+    }
+    
+    func getPrice(value: Float)->String {
+        
+        
+        let format = NumberFormatter()
+        Text("Kr")
+     
+        
+        return format.string(from: NSNumber(value: value)) ?? ""
+    }
+
+    
+    
 }
+

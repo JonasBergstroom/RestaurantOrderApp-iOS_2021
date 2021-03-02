@@ -14,7 +14,7 @@ struct ContentView: View {
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
             
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
 
     }
 }
