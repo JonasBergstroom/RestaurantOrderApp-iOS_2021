@@ -19,30 +19,7 @@ class ChatroomsViewModel: ObservableObject {
     private let db = Firestore.firestore()
     private let user = Auth.auth().currentUser
     
-    func fetchData() {
-        
-        if (user != nil) {
-            db.collection("Chatrooms").whereField("userss", arrayContains: user!.uid).addSnapshotListener({
-                (snapshot, error)
-                in
-                guard let documents = snapshot?.documents else {
-                    print ("no docs returned!")
-                    return
-                }
-                
-                self.chatrooms = documents.map({
-                    docSnapshot -> Chatroomss in
-                    let data = docSnapshot.data()
-                    let docId = docSnapshot.documentID
-                    return Chatroomss(id: docId)
-                })
-            })
-        }
-        
-        
-        
-        
-    }
+
     
     func createChatroom( handler: @escaping () -> Void) {
         

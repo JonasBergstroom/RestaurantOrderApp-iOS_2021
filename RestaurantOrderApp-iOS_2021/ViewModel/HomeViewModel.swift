@@ -25,6 +25,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     @Published var filtered: [Item] = []
     
     @Published var cartItmes: [Cart] = []
+    @Published var ordered = false
     
     
     
@@ -151,11 +152,20 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     func addToCart(item: Item) {
         
         self.items[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
-        self.filtered[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+        let filterIndex = self.filtered.firstIndex{ (item1) -> Bool in
+            return item.id == item1.id
+            
+        } ?? 0
+        self.filtered[filterIndex].isAdded = !item.isAdded
 
         
         if item.isAdded {
-            self.cartItmes.remove(at: getIndex(item: item, isCartIndex: true))
+             let index = getIndex(item: item, isCartIndex: true)
+            if index > 4 {
+                
+                self.cartItmes.remove(at: index)
+
+            }
             return
         }
         
@@ -201,7 +211,62 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         return format.string(from: NSNumber(value: value)) ?? ""
     }
 
+    func updateOrder(){
+        
+        
+        let db = Firestore.firestore()
+        
+        if ordered {
+            ordered = false
+            db.collection("Users").document(Auth.auth().currentUser!.uid).delete() {
+                (err) in
+                
+                if err != nil {
+                    self.ordered = true
+                }
+                
+            }
+            
+            return
+            
+            
+        }
+        
+        
+        var details : [[String : Any]] = []
+        
+        cartItmes.forEach { (Cart) in
+            details.append([
+                
+                "item_name": Cart.item.itemName,
+                "item_quantity": Cart.quantity,
+                "item_Cost": Cart.item.itemCost
+
+                
+
+        ])
+        }
+        ordered = true
+        
+        db.collection("Users").document(Auth.auth().currentUser!.uid).setData([
     
+            "ordered_food": details,
+            "total_cost": calculateTotalPrice(),
+            "location": GeoPoint(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+
+            
+            ]) { (err) in
+            
+            if err != nil {
+                self.ordered = false
+                return
+            }
+            
+            print("success")
+        
+        }
+        
+    }
     
 }
 

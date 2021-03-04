@@ -12,6 +12,7 @@ struct Home: View {
     @StateObject var HomeModel = HomeViewModel()
     @ObservedObject var viewModel = ChatroomsViewModel()
     @State var messagesOpen = false
+
     
 
     
@@ -31,7 +32,6 @@ struct Home: View {
                             HomeModel.showMenu.toggle()
                         }
                     }, label: {
-                        
                         
                         Image(systemName: "line.horizontal.3")
                             .font(.title)
@@ -107,26 +107,29 @@ struct Home: View {
                                 HStack {
                                     
                                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+
                                     
                                     Button(action: {
+
+    
                                         HomeModel.addToCart(item: item)
                                     }, label: {
-                                        
                                         Image(systemName: item.isAdded ? "checkmark" : "plus.circle.fill")
+
+                                            
                                             .foregroundColor(.blue)
                                             .padding(5)
                                             .font(.system(size: 35))
                                             .background(item.isAdded ? Color.green : Color("blue"))
                                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+
+                                       
                                     })
-                                    
-                                    
-                                    
+                                   
+
                                 }
                                 
-                                .padding(.trailing,10)
-                                .padding(.top,10)
-                                
+                        
                                 
                                 
                             })
@@ -206,6 +209,5 @@ struct Home: View {
             }
         })
     }
+    
 }
-
-

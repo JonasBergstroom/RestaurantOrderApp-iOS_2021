@@ -52,6 +52,7 @@ struct Messages: View {
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Back")
+
                     })
                 }
                
