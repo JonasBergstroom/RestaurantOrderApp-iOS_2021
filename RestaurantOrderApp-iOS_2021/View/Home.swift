@@ -18,7 +18,10 @@ struct Home: View {
         ZStack {
             VStack(spacing: 10) {
                 
+                
                 HStack(spacing: 15) {
+                    
+                    // In this stack the chosen location shows and the "side menu" icon
                     
                     
                     Button(action: {
@@ -61,11 +64,14 @@ struct Home: View {
                     
                     
                 }
+                
                 .padding([.horizontal,.top])
                 
                 Divider()
                 
                 HStack(spacing: 15) {
+                    
+                    // Here shows the "Search bar"
                     
                     Image(systemName: "magnifyingglass")
                         .font(.title2)
@@ -84,6 +90,8 @@ struct Home: View {
                 Divider()
                 
                 ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+                    
+                    // In this ScrollView all the dishes is shown
                     
                     
                     VStack(spacing: 25){
@@ -143,6 +151,7 @@ struct Home: View {
             
             HStack {
                 
+                // This is the "side menu" when you click it you will be taken to the Cart icon
                 
                 ToCart(homeData: HomeModel)
                     .offset(x: HomeModel.showMenu ? 0 : -UIScreen.main.bounds.width / 1.6)
@@ -152,22 +161,26 @@ struct Home: View {
             }
             .background(Color.black.opacity(HomeModel.showMenu ? 0.3 : 0).ignoresSafeArea())
             
+            // Closing the "side menu" when you click outside it
             .onTapGesture(perform: {
                 withAnimation(.easeIn){
                     HomeModel.showMenu.toggle() }
             })
             
-            
+            // Show alert if you have not enable location in settings
             
             if HomeModel.noLocation {
                 Text("Please enable location in settings!")
                     .foregroundColor(.black)
             }
             
+            // Taking you to the "Chat" window
+            
         }.fullScreenCover(isPresented: $messagesOpen) {
             Messages(chatroom: Chatroomss(id: Auth.auth().currentUser!.uid))
         }
         
+        // Making the startup work correctly for the app
         
         .onAppear(perform: {
             

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
+        // "Home" View is the one that show when start the app
+        
         NavigationView {
             Home()
                 .navigationBarHidden(true)
@@ -16,10 +19,11 @@ struct ContentView: View {
             
             
         }.navigationViewStyle(StackNavigationViewStyle())
-
+        
     }
     
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

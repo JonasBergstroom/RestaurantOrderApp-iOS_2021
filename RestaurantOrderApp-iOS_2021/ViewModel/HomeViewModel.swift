@@ -133,22 +133,6 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     
     
-    /*    func filterData(){
-     
-     
-     withAnimation(.linear) {
-     self.filtered = self.items.filter{
-     
-     return $0.itemName.lowercased().contains(self.search.lowercased())
-     }
-     }
-     
-     
-     
-     
-     }
-     */
-    
     
     func addToCart(item: Item) {
         
@@ -258,10 +242,13 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         ]) { (err) in
             
             // If error setting data, order is no longer active
+            
             if err != nil {
                 self.ordered = false
                 return
             }
+            
+            
             
             
             

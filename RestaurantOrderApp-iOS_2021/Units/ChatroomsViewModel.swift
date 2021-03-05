@@ -19,7 +19,7 @@ class ChatroomsViewModel: ObservableObject {
     private let db = Firestore.firestore()
     private let user = Auth.auth().currentUser
     
-
+    
     
     func createChatroom( handler: @escaping () -> Void) {
         

@@ -18,6 +18,8 @@ struct CartView: View {
     var body: some View {
         VStack{
             
+            // Cart view
+            
             HStack(spacing: 20) {
                 
                 Button(action: {present.wrappedValue.dismiss()}) {
@@ -44,6 +46,8 @@ struct CartView: View {
                 
                 LazyVStack(spacing: 0) {
                     
+                    // Cart ItemView
+                    
                     ForEach(homeData.cartItmes) {Cart in
                         
                         HStack(spacing: 15) {
@@ -66,12 +70,15 @@ struct CartView: View {
                                 
                                 HStack(spacing: 15) {
                                     
+                                    // Showing the price of the item
+                                    
                                     Text("\(homeData.getPrice(value: Float(Cart.item.itemCost))) Kr")
                                         .font(.title2)
                                         .fontWeight(.heavy)
                                     
                                     Spacer(minLength: 0)
                                     
+                                    // Change the amount of the item with -1
                                     
                                     Button(action: {
                                         if Cart.quantity > 1 { homeData.cartItmes[homeData.getIndex(item: Cart.item, isCartIndex: true)].quantity
@@ -97,6 +104,7 @@ struct CartView: View {
                                         .padding(.horizontal,10)
                                         .background(Color(UIColor.label).opacity(0.06))
                                     
+                                    // Change the amount of the item with +1
                                     
                                     Button(action: {
                                         
@@ -131,6 +139,8 @@ struct CartView: View {
                         .padding()
                         .contextMenu{
                             
+                            // To delete an item from the cart
+                            
                             Button(action: {
                                 
                                 
@@ -155,19 +165,7 @@ struct CartView: View {
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                     }
@@ -184,6 +182,7 @@ struct CartView: View {
                 
                 HStack {
                     
+                    // Showing the total amount of all items in the cart
                     
                     Text("Total")
                         .fontWeight(.heavy)
@@ -205,6 +204,8 @@ struct CartView: View {
                 
                 Button(action: {homeData.updateOrder()}) {
                     ZStack {
+                        
+                        // Here can you with one button press make the order an with a second press cancel it
                         
                         Color(homeData.ordered ?.red : .blue)
                         Text(homeData.ordered ? "Cancel Order" : "Checkout")

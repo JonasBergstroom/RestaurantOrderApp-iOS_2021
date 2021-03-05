@@ -19,6 +19,8 @@ struct RestaurantOrderApp_iOS_2021App: App {
 
 class AppDelegate: NSObject,UIApplicationDelegate {
     
+    // Intializing Firebase
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -26,6 +28,5 @@ class AppDelegate: NSObject,UIApplicationDelegate {
         return true
     }
     
-
     
 }

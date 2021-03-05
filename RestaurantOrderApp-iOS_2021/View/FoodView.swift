@@ -15,6 +15,7 @@ struct FoodView: View {
         
         VStack {
             
+            // Imported SDWebImage to make the image from firebase shows correctly
             
             WebImage(url: URL(string: item.itemImage))
                 .resizable()
@@ -31,6 +32,7 @@ struct FoodView: View {
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 
+                // Rating View
                 
                 ForEach(1...5,id: \.self) {index in
                     Image(systemName: "star.fill")
@@ -44,12 +46,11 @@ struct FoodView: View {
                 
                 
                 
-                
-                
-                
             }
             
             HStack {
+                
+                // Details View
                 
                 Text(item.itemDetails)
                     .font(.caption)

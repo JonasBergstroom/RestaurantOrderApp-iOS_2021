@@ -12,6 +12,7 @@ struct ToCart: View {
     @ObservedObject var homeData : HomeViewModel
     var body: some View {
         
+        // This whole view is showing the "side menu"
         
         VStack {
             
