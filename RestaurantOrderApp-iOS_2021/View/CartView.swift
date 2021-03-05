@@ -12,8 +12,8 @@ struct CartView: View {
     
     @ObservedObject var homeData : HomeViewModel
     @Environment(\.presentationMode)  var present
-
-
+    
+    
     
     var body: some View {
         VStack{
@@ -32,7 +32,6 @@ struct CartView: View {
                 Text("My cart")
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(.black)
                 
                 
                 
@@ -61,20 +60,15 @@ struct CartView: View {
                                 
                                 Text(Cart.item.itemName)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.black)
                                 
                                 
-                          //      Text(Cart.item.itemDetails)
-                         //           .fontWeight(.semibold)
-                          //          .foregroundColor(.gray)
-                           //         .lineLimit(2)
+                                
                                 
                                 HStack(spacing: 15) {
                                     
                                     Text("\(homeData.getPrice(value: Float(Cart.item.itemCost))) Kr")
                                         .font(.title2)
                                         .fontWeight(.heavy)
-                                        .foregroundColor(.black)
                                     
                                     Spacer(minLength: 0)
                                     
@@ -91,7 +85,6 @@ struct CartView: View {
                                         Image(systemName: "minus")
                                             
                                             .font(.system(size: 16, weight: .heavy))
-                                            .foregroundColor(.black)
                                         
                                         
                                         
@@ -100,10 +93,9 @@ struct CartView: View {
                                     
                                     Text("\(Cart.quantity)")
                                         .fontWeight(.heavy)
-                                        .foregroundColor(.black)
                                         .padding(.vertical,5)
                                         .padding(.horizontal,10)
-                                        .background(Color.black.opacity(0.06))
+                                        .background(Color(UIColor.label).opacity(0.06))
                                     
                                     
                                     Button(action: {
@@ -111,7 +103,7 @@ struct CartView: View {
                                         homeData.cartItmes[homeData.getIndex(item: Cart.item, isCartIndex: true)].quantity
                                             
                                             += 1
-                                    
+                                        
                                         
                                     }) {
                                         
@@ -119,7 +111,7 @@ struct CartView: View {
                                         Image(systemName: "plus")
                                             
                                             .font(.system(size: 16, weight: .heavy))
-                                            .foregroundColor(.black)
+                                        
                                         
                                         
                                         
@@ -138,7 +130,7 @@ struct CartView: View {
                         
                         .padding()
                         .contextMenu{
-                          
+                            
                             Button(action: {
                                 
                                 
@@ -148,12 +140,12 @@ struct CartView: View {
                                 
                                 
                                 homeData.items[itemIndex].isAdded = false
-                                homeData.filtered[itemIndex].isAdded = false
-
-
+                                
+                                
+                                
                                 
                                 homeData.cartItmes.remove(at: index)
-
+                                
                             }){
                                 
                                 
@@ -161,17 +153,17 @@ struct CartView: View {
                                 
                             }
                             
-                                   
-                                   
-                                   
-                
-                        
+                            
+                            
+                            
+                            
+                            
                             
                             
                         }
                         
                         
-                    
+                        
                         
                         
                         
@@ -203,7 +195,6 @@ struct CartView: View {
                         
                         .font(.title)
                         .fontWeight(.heavy)
-                        .foregroundColor(.black)
                     Text("KR")
                         .font(.title)
                         .fontWeight(.heavy)
@@ -213,24 +204,22 @@ struct CartView: View {
                 
                 
                 Button(action: {homeData.updateOrder()}) {
-                    
-                    
-                    Text(homeData.ordered ? "Cancel Order" : "Checkout")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.black)
-                        .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 30)
+                    ZStack {
                         
-                        .background(
-                            
-                            Color(.blue)
-                            
-                            
-                        )
+                        Color(homeData.ordered ?.red : .blue)
+                        Text(homeData.ordered ? "Cancel Order" : "Checkout")
+                            .font(.title2)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.white)
+                            .padding()
                         
-                        .cornerRadius(15)
+                        
+                        
+                    }
+                    .cornerRadius(15)
                     
+                    .frame(width: UIScreen.main.bounds.width - 30)
+                    .fixedSize(horizontal: false, vertical: true)
                     
                 }
                 
@@ -240,7 +229,6 @@ struct CartView: View {
                 
             }
             
-          
             
             
             

@@ -133,20 +133,21 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     
     
-    func filterData(){
-        
-        
-        withAnimation(.linear) {
-            self.filtered = self.items.filter{
-                
-                return $0.itemName.lowercased().contains(self.search.lowercased())
-            }
-        }
-        
-        
-        
-        
-    }
+    /*    func filterData(){
+     
+     
+     withAnimation(.linear) {
+     self.filtered = self.items.filter{
+     
+     return $0.itemName.lowercased().contains(self.search.lowercased())
+     }
+     }
+     
+     
+     
+     
+     }
+     */
     
     
     func addToCart(item: Item) {
@@ -157,14 +158,14 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
             
         } ?? 0
         self.filtered[filterIndex].isAdded = !item.isAdded
-
+        
         
         if item.isAdded {
-             let index = getIndex(item: item, isCartIndex: true)
-            if index > 4 {
+            let index = getIndex(item: item, isCartIndex: true)
+            if index >= 0 {
                 
                 self.cartItmes.remove(at: index)
-
+                
             }
             return
         }
@@ -205,12 +206,11 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         
         let format = NumberFormatter()
-        Text("Kr")
-     
+        
         
         return format.string(from: NSNumber(value: value)) ?? ""
     }
-
+    
     func updateOrder(){
         
         
@@ -241,29 +241,32 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
                 "item_name": Cart.item.itemName,
                 "item_quantity": Cart.quantity,
                 "item_Cost": Cart.item.itemCost
-
                 
-
-        ])
+                
+                
+            ])
         }
         ordered = true
         
         db.collection("Users").document(Auth.auth().currentUser!.uid).setData([
-    
+            
             "ordered_food": details,
             "total_cost": calculateTotalPrice(),
             "location": GeoPoint(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
-
             
-            ]) { (err) in
             
+        ]) { (err) in
+            
+            // If error setting data, order is no longer active
             if err != nil {
                 self.ordered = false
                 return
             }
             
+            
+            
             print("success")
-        
+            
         }
         
     }

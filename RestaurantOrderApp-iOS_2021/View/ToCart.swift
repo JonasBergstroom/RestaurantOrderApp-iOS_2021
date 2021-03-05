@@ -25,13 +25,12 @@ struct ToCart: View {
                     
                     Text("Cart")
                         .fontWeight(.bold)
-                        .foregroundColor(.black)
                     
                     Spacer(minLength: 0)
                 }
                 .padding()
             }
-        
+            
             
             
             Spacer()
@@ -49,7 +48,7 @@ struct ToCart: View {
             
         }
         .frame(width: UIScreen.main.bounds.width / 1.6)
-        .background(Color.white.ignoresSafeArea())
+        .background(Color(UIColor.systemBackground).ignoresSafeArea())
         
     }
     

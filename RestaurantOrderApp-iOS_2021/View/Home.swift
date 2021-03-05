@@ -12,13 +12,7 @@ struct Home: View {
     @StateObject var HomeModel = HomeViewModel()
     @ObservedObject var viewModel = ChatroomsViewModel()
     @State var messagesOpen = false
-
     
-
-    
-
-    
-  
     
     var body: some View {
         ZStack {
@@ -40,7 +34,6 @@ struct Home: View {
                     
                     
                     Text(HomeModel.userLocation == nil ? " Locating... " : "Deliver to")
-                        .foregroundColor(.black)
                     
                     
                     Text(HomeModel.userAdress)
@@ -49,20 +42,20 @@ struct Home: View {
                         .foregroundColor(.blue)
                     
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-
+                    
                     
                     Button(action: {
                         
                         messagesOpen = true
-    
+                        
                     }, label:
-                         {
+                        {
                             Image(systemName: "message.fill")
                                 .font(.title)
                                 .foregroundColor(.blue)
-                        
-                        
-                    })
+                            
+                            
+                        })
                     
                     
                     
@@ -95,7 +88,7 @@ struct Home: View {
                     
                     VStack(spacing: 25){
                         
-                        ForEach(HomeModel.filtered) {item in
+                        ForEach(HomeModel.items.filter(withAnimation(.linear){{HomeModel.search.isEmpty ? true : $0.itemName.lowercased().contains(HomeModel.search.lowercased())}})) {item in
                             Color.blue
                             
                             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
@@ -107,29 +100,29 @@ struct Home: View {
                                 HStack {
                                     
                                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-
+                                    
                                     
                                     Button(action: {
-
-    
+                                        
+                                        
                                         HomeModel.addToCart(item: item)
                                     }, label: {
                                         Image(systemName: item.isAdded ? "checkmark" : "plus.circle.fill")
-
+                                            
                                             
                                             .foregroundColor(.blue)
                                             .padding(5)
                                             .font(.system(size: 35))
                                             .background(item.isAdded ? Color.green : Color("blue"))
                                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-
-                                       
+                                        
+                                        
                                     })
-                                   
-
+                                    
+                                    
                                 }
                                 
-                        
+                                
                                 
                                 
                             })
@@ -176,38 +169,15 @@ struct Home: View {
         }
         
         
-         .onAppear(perform: {
-              
-              HomeModel.locationManager.delegate = HomeModel
-              
-              
-              
-              
-          })
-        
-        .onChange(of: HomeModel.search, perform: { value in
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+        .onAppear(perform: {
+            
+            HomeModel.locationManager.delegate = HomeModel
             
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                
-                if value == HomeModel.search && HomeModel.search != "" {
-                    
-                    
-                    HomeModel.filterData()
-                    
-                }
-                
-                
-            }
             
-            if HomeModel.search == "" {
-                
-                withAnimation(.linear){HomeModel.filtered = HomeModel.items}
-                
-                
-            }
+            
         })
+        
     }
     
 }
