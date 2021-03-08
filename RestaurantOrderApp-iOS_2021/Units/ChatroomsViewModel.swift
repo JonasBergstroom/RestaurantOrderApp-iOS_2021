@@ -17,6 +17,8 @@ struct Chatroomss: Codable, Identifiable {
 
 class ChatroomsViewModel: ObservableObject {
     
+    // Holding all the chat room instances returned by firebase
+    
     @Published var chatrooms = [Chatroomss]()
     private let db = Firestore.firestore()
     private let user = Auth.auth().currentUser

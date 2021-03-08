@@ -12,11 +12,14 @@ struct ToCart: View {
     @ObservedObject var homeData : HomeViewModel
     var body: some View {
         
-        // This whole view is showing the "side menu"
+        // This view is showing the "side menu"
         
         VStack {
             
             NavigationLink(destination: CartView(homeData: homeData)) {
+                
+                // Taking you to the "CartView" when clicked on
+                
                 HStack(spacing: 15) {
                     
                     Image(systemName: "cart")

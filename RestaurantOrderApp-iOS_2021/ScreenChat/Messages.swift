@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Messages: View {
     
+    // Makes the user see all the messages written when open the "Chat"
+    
     let chatroom: Chatroomss
     @ObservedObject var viewModel = MessageViewModel()
     @State var messageField = ""
@@ -21,6 +23,9 @@ struct Messages: View {
     }
     
     var body: some View {
+        
+        // This is the "Chat" view
+        
         NavigationView {
             VStack {
                 List(viewModel.messages) {
