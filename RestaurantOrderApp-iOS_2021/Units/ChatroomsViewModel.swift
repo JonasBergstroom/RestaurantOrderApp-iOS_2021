@@ -9,7 +9,9 @@ import Foundation
 import Firebase
 
 struct Chatroomss: Codable, Identifiable {
+
     var id: String
+    
 }
 
 
@@ -22,6 +24,9 @@ class ChatroomsViewModel: ObservableObject {
     
     
     func createChatroom( handler: @escaping () -> Void) {
+        
+        
+        // When you write something in the chat for the first time, a chatroom will be created with a specifc userid
         
         if (user != nil) {
             if let uid = user?.uid {

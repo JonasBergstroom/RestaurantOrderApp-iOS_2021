@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Cart: Identifiable {
     
+    // All the "Cart" variables
+    
     var id = UUID().uuidString
     var item: Item
     var quantity: Int

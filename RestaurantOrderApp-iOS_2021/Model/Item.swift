@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Item: Identifiable {
    
+    // All the "Item" variables
+    
     var id: String
     var itemName: String
     var itemCost: Int

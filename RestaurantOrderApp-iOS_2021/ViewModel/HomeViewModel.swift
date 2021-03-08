@@ -10,19 +10,30 @@ import CoreLocation
 import Firebase
 
 
+// Fetching user location
 
 class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     
     @Published var locationManager = CLLocationManager()
     @Published var search = ""
+    
+    // Location details
+    
     @Published var userLocation : CLLocation!
     @Published var userAdress = ""
     @Published var noLocation = false
+    
+    // Menu
+    
     @Published var showMenu = false
+    
+    // Itemdata
     
     @Published var items: [Item] = []
     @Published var filtered: [Item] = []
+    
+    // Cartdata
     
     @Published var cartItmes: [Cart] = []
     @Published var ordered = false
@@ -33,6 +44,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager)
     {
+        // Checking location access
         
         switch manager.authorizationStatus {
         case .authorizedWhenInUse:
@@ -60,8 +72,13 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        // Reading user location and extracting details
+        
         self.userLocation = locations.last
         self.extractLocation()
+        
+        // Logging in after the extracting
+        
         self.login()
         
         
@@ -77,6 +94,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         var adress = ""
         
+        // Getting area and locality name
+        
         adress += safeData.first?.name ?? ""
         adress += ", "
         adress += safeData.first?.locality ?? ""
@@ -87,6 +106,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func login() {
         
+        // Anonymous login for reading from firebase
+        
         Auth.auth().signInAnonymously{ (res, err) in
             if err != nil {
                 print(err!.localizedDescription)
@@ -96,6 +117,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
             
             print("Success = \(res!.user.uid)")
             
+            // Fetching data after login
+            
             self.getData()
         }
         
@@ -104,6 +127,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     
     func getData() {
+        
+        // Fetching item data from firestore
         
         let db = Firestore.firestore()
         
@@ -136,6 +161,9 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func addToCart(item: Item) {
         
+        // Add to cart function
+        // Checking if the chosen item is added
+        
         self.items[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
         let filterIndex = self.filtered.firstIndex{ (item1) -> Bool in
             return item.id == item1.id
@@ -145,6 +173,9 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
         
         
         if item.isAdded {
+            
+            // Removing from list
+            
             let index = getIndex(item: item, isCartIndex: true)
             if index >= 0 {
                 
@@ -154,10 +185,13 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
             return
         }
         
+        // Else adding
+        
         self.cartItmes.append(Cart(item: item, quantity: 1))
         
     }
     
+    // Getting the index when adding to the cart
     
     func getIndex(item: Item,isCartIndex: Bool) ->Int{
         let index = self.items.firstIndex {
@@ -174,6 +208,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func calculateTotalPrice()->String {
         
+        // Calculating the total price of the items
         
         var price : Float = 0
         
@@ -188,6 +223,8 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func getPrice(value: Float)->String {
         
+        // Getting the total price
+        
         
         let format = NumberFormatter()
         
@@ -197,6 +234,7 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
     
     func updateOrder(){
         
+        // Writes the order data to the firestore
         
         let db = Firestore.firestore()
         
@@ -247,9 +285,6 @@ class HomeViewModel: NSObject,ObservableObject,CLLocationManagerDelegate {
                 self.ordered = false
                 return
             }
-            
-            
-            
             
             
             print("success")

@@ -8,6 +8,7 @@ import Foundation
 import Firebase
 
 struct Message: Codable, Identifiable {
+    
     var id: String?
     var content: String
     var name: String
